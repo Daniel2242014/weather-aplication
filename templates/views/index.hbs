@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Primera prueba</title>
+    <link rel="stylesheet" href="./css/style.css">
+   
+</head>
+<body>
+    <div class="main-container">
+        {{>header}}
+        <div class="context">
+            <p>El proposito de esa pagina es: {{descripcion}}</p>
+
+            <form action="">
+                <input type="text">
+                <button>Buscar</button>
+            </form>
+            <p id="textoACambiar"></p>
+
+        </div>
+        
+    </div>
+     <footer>
+        {{>footer}}
+    </footer> 
+     <script src="./js/fetchForecast.js"></script> {{! ESTO TIENE QUE IR AQUI, PARA QUE ESTE EL FORM CUANDO CARGAMO EL EVENTO}}
+</body>
+</html>
+
+
+
