@@ -6,6 +6,9 @@ const forecast = require('../../WeatherApp/utils/forecast')
 
 const app = express()
 
+
+const port = process.env.PORT || 3000 //Este es el puerto que heroku usa, es una variable que el entrega, sino usa el 3000
+
 //Definimos rutas y accesos
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -71,6 +74,6 @@ app.get('*', (req,res)=> {
                       createBy: 'DP'})
 })
 
-app.listen(3000, ()=> {
-    console.log('Servidor arriba')
+app.listen(port, ()=> {
+    console.log('Servidor arriba, en el puerto ' + port)
 })
