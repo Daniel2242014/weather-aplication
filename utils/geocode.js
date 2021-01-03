@@ -15,7 +15,7 @@ const geoCodeByAddres = (address,callBack) => {
         
             callBack(undefined,{longitud: data.features[0].center[1],
                                 altitud: data.features[0].center[0],
-                                location: data.features[0].place_name
+                                location: data.features[0].place_name,
                                 })
         }
         

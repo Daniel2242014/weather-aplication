@@ -8,7 +8,7 @@ const forecast = (longitud, altitud, callback) => {
         }else if(data.error){
             callback('Forecast unabled')
         }else{
-            const dataF = data.current.weather_descriptions.join(' ')
+            const dataF = data.current.weather_descriptions.join(' ') + ', humedad del ' + data.current.humidity + '%'
             callback(undefined, dataF)
         }        
     })   
